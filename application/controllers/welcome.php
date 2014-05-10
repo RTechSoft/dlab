@@ -17,7 +17,7 @@ class Welcome extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see http://codeigniter.com/user_guide/general/urls.html
 	 */
-	
+
 	public function __construct() {
 		parent::__construct();
 		$this->load->helper("url");
@@ -25,13 +25,24 @@ class Welcome extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('home_view');
+		$this->load->view('user_resources');
 	}
 
 	public function sign_up()
 	{
 		$this->load->view('signup_view');
 	}
+
+	public function load_resource()
+	{
+		$this->load->view('user_resources');
+	}
+
+	public function load_addres_form()
+	{
+		$this->load->view('add-resource.php');
+	}
+
 }
 
 /* End of file welcome.php */
