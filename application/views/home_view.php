@@ -20,9 +20,11 @@
 </head>
 
 <body>
-    <div class="container" style="height: 150px;"> 
-        <div class="jumbotron" style="background: #fff;">
-            <h1 style="text-align:center; margin-top: -8px;"> iRescue</h1>
+    <div style="height: 150px; background: #000;">
+        <div class="container"> 
+            <div class="jumbotron" style="background: #000;">
+                <h1 style="text-align:center; margin-top: -8px; color: #fff;"><b class="glyphicon glyphicon-screenshot"></b> iRescue</h1>
+            </div>
         </div>
     </div>
 
@@ -44,7 +46,7 @@
                         </a>
                     </li>
                     <li  style="padding-left:10px;">
-                        <a href="<?php echo site_url('welcome/sign_up'); ?>" style="padding: 0px;">
+                        <a href="<?php echo site_url('welcome/sign_in'); ?>" style="padding: 0px;">
                             <button type="button" class="btn btn-default">Sign In</button>
                         </a>
                     </li>

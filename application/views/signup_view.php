@@ -7,18 +7,10 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Sign Up</title>
+    <title>Sign Up | iRescue</title>
 
     <!-- Bootstrap core CSS -->
     <link href="<?php echo base_url(); ?>css/bootstrap.css" rel="stylesheet">
-
-    <!-- Add custom CSS here -->
-    <style>
-    body {
-        margin-top: 60px;
-    }
-    </style>
-
     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
      <script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
      <link rel="stylesheet" href="<?php echo base_url();?>map.css" />
@@ -28,26 +20,24 @@
 
 <body>
 
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.php">iRescue</a>
+    <div style="height: 150px; background: #000;">
+        <div class="container"> 
+            <div class="jumbotron" style="background: #000;">
+                <h1 style="text-align:center; margin-top: -8px; color: #fff;"><b class="glyphicon glyphicon-screenshot"></b> iRescue</h1>
             </div>
+        </div>
+    </div>
 
+    <nav class="navbar navbar-inverse" role="navigation">
+        <div class="container">
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="#about">Home</a>
+                    <li><a href="<?php echo site_url('welcome'); ?>">Home</a>
                     </li>
-                    <li><a href="#services">Organizations</a>
+                    <li><a href="#organizations">Organizations</a>
                     </li>
-                    <li><a href="#contact">About</a>
+                    <li><a href="#about">About</a>
                     </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right" style="padding-top:8px;">
@@ -57,7 +47,7 @@
                         </a>
                     </li>
                     <li  style="padding-left:10px;">
-                        <a href="<?php echo site_url('welcome/sign_up'); ?>" style="padding: 0px;">
+                        <a href="<?php echo site_url('welcome/sign_in'); ?>" style="padding: 0px;">
                             <button type="button" class="btn btn-default">Sign In</button>
                         </a>
                     </li>
@@ -73,7 +63,7 @@
             <div class="page-content inset">
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="panel panel-default">
+                        <div class="panel panel-danger">
                             <div class="panel-heading">
                                 <h2 class="panel-title">Create Organization Profile</h2>
                             </div>
