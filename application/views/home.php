@@ -38,11 +38,19 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="#about">About</a>
+                    <li><a href="#about">Home</a>
                     </li>
-                    <li><a href="#services">Services</a>
+                    <li><a href="#services">Organizations</a>
                     </li>
-                    <li><a href="#contact">Contact</a>
+                    <li><a href="#contact">About</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <button type="button" class="btn btn-default btn">Sign up</button>
+                    </li>
+                    <li>
+                        <button type="button" class="btn btn-default btn">Sign in</button>
                     </li>
                 </ul>
             </div>
