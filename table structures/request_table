@@ -2,7 +2,7 @@ CREATE TABLE `request` (
 	`request_id` INT( 50 ) NOT NULL AUTO_INCREMENT ,
 	`resource_id` INT( 50 ) NOT NULL ,
 	`borrower_id` INT( 50 ) NOT NULL ,
-    `quantity` INT( 1000 ) NOT NULL ,
+    `quantity` INT( 255 ) NOT NULL ,
   	`purpose` VARCHAR( 255 ) NOT NULL ,
   	`request_status` VARCHAR( 150 ) NOT NULL ,
   	`resource_status` VARCHAR( 150 ) NOT NULL ,
