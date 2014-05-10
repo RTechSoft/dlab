@@ -32,11 +32,11 @@
         <div class="container">
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="#about">Home</a>
+                    <li><a href="<?php echo site_url('welcome'); ?>">Home</a>
                     </li>
-                    <li><a href="#services">Organizations</a>
+                    <li><a href="#organizations">Organizations</a>
                     </li>
-                    <li><a href="#contact">About</a>
+                    <li><a href="#about">About</a>
                     </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right" style="padding-top:8px;">
@@ -46,7 +46,7 @@
                         </a>
                     </li>
                     <li  style="padding-left:10px;">
-                        <a href="<?php echo site_url('welcome/sign_up'); ?>" style="padding: 0px;">
+                        <a href="<?php echo site_url('welcome/sign_in'); ?>" style="padding: 0px;">
                             <button type="button" class="btn btn-default">Sign In</button>
                         </a>
                     </li>
