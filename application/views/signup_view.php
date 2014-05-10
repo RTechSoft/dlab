@@ -19,6 +19,11 @@
     }
     </style>
 
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
+     <script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
+     <link rel="stylesheet" href="<?php echo base_url();?>map.css" />
+     <script src="http://www.mapquestapi.com/sdk/leaflet/v1.0/mq-map.js?key=Fmjtd%7Cluur2qa729%2C7n%3Do5-9abx1z"></script>
+     <script src="http://www.mapquestapi.com/sdk/leaflet/v1.0/mq-routing.js?key=Fmjtd%7Cluur2qa729%2C7n%3Do5-9abx1z"></script>
 </head>
 
 <body>
@@ -129,8 +134,16 @@
                                                 <label for="website">Website URL</label>
                                                 <input type="text" class="form-control" id="website" name="website" placeholder="www.organization.com"value="<?php echo set_value('website'); ?>" />
                                             </div>
+                                            <label>Help us Map you by Clicking on your location!</label>
+                                            <div class="mapDisplay">
+                                                <div id ="map">
+                                                
+                                                </div>
+                                            </div>
                                         </div>
                                         <br>
+                                        <input id="long" type="hidden" name="long" value="0">
+                                        <input id="lat" type="hidden" name="lat" value="0">
                                         <input type="submit" class="btn btn-default" value="Submit" />
                                         <?php echo form_close(); ?>
                                     </div>
@@ -148,6 +161,77 @@
     <script src="js/jquery-1.10.2.js"></script>
     <script src="js/bootstrap.js"></script>
 
+    <script type="text/javascript">
+
+ //layers
+    var mapLayer = MQ.mapLayer(),
+    map;
+    var hospitals = new L.layerGroup();
+    var firestations = new L.layerGroup();
+    var policestations = new L.layerGroup();
+    var schools = new L.layerGroup()
+
+ //icons
+var hospIcon = L.icon({
+    iconUrl: '<?php echo base_url();?>images/hospital.png',
+    iconSize: [20, 20],
+    iconAnchor: [13, 75],
+    popupAnchor: [-3, -76],
+    shadowSize: [20, 20],
+    shadowAnchor:[20, 20]
+});
+var policeIcon = L.icon({
+    iconUrl: '<?php echo base_url();?>images/police.png',
+    iconSize: [20, 20],
+    iconAnchor: [13, 75],
+    popupAnchor: [-3, -76],
+    shadowSize: [20, 20],
+    shadowAnchor:[20, 20]
+});
+
+var fireIcon = L.icon({
+    iconUrl: '<?php echo base_url();?>images/fire.png',
+    iconSize: [20, 20],
+    iconAnchor: [13, 75],
+    popupAnchor: [-3, -76],
+    shadowSize: [20, 20],
+    shadowAnchor:[20, 20]
+});
+
+var schoolIcon = L.icon({
+    iconUrl: '<?php echo base_url();?>images/school.png',
+    iconSize: [20, 20],
+    iconAnchor: [13, 75],
+    popupAnchor: [-3, -76],
+    shadowSize: [20, 20],
+    shadowAnchor:[20, 20]
+});
+//end of icons
+
+
+
+
+map = L.map('map', {
+    layers: mapLayer,
+    center: [14.5942,120.982],
+    zoom: 13
+});
+var newMarker = new L.marker([0,0]).addTo(map);
+function addMarker(e){
+    // Add marker to map at click location; add popup window
+    map.removeLayer(newMarker);
+    newMarker = new L.marker(e.latlng).addTo(map);
+    map.addLayer(newMarker);
+    var lng = document.getElementById("long");
+    lng.value = e.latlng.lng;
+    var lat = document.getElementById("lat");
+    lat.value = e.latlng.lat;
+}
+map.on('click',  addMarker);
+</script>
+    <style>
+        #map { width: 100%; height: 300px; }
+    </style>
 </body>
 
 </html>

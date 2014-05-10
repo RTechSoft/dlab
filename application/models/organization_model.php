@@ -45,7 +45,9 @@ class Organization_model extends CI_Model {
 			'address' => $this->input->post('address'),
 			'hotline' => $this->input->post('hotline'),
 			'email_address' => $this->input->post('email_address'),
-			'website' => $this->input->post('website')
+			'website' => $this->input->post('website'),
+			'long' => $this->input->post('long'),
+			'lat' => $this->input->post('lat')
 		);
 
 		$this->db->insert('organization', $organization_data);

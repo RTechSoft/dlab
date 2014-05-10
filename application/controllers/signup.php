@@ -16,9 +16,9 @@ class SignUp extends CI_Controller {
 		$this->form_validation->set_rules('username', 'Username', 'required|min_length[4]|xss_clean');
 		$this->form_validation->set_rules('password', 'Password', 'required|min_length[4]|xss_clean');
 		$this->form_validation->set_rules('name', 'Organization Name', 'required|min_length[4]|xss_clean');
-		$this->form_validation->set_rules('type', 'Organization Type', 'required|min_length[10]|xss_clean');
+		$this->form_validation->set_rules('type', 'Organization Type', 'required|xss_clean');
 		$this->form_validation->set_rules('description', 'Description', 'required|xss_clean');
-		$this->form_validation->set_rules('address', 'Address', 'required|min_length[10]|xss_clean');
+		$this->form_validation->set_rules('address', 'Address', 'required|xss_clean');
 		$this->form_validation->set_rules('hotline', 'Contact Number', 'required|min_length[11]|xss_clean');
 		$this->form_validation->set_rules('email_address', 'E-mail Address', 'required|min_length[4]|xss_clean');
 		$this->form_validation->set_rules('website', 'Website URL', 'min_length[5]|xss_clean');
