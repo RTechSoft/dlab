@@ -38,10 +38,14 @@
 */
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 $autoload['packages'] = array();
 =======
 $autoload['packages'] = array('database', 'session');
 >>>>>>> 1380736c39a60e978c78e317539abe798344ef85
+=======
+$autoload['packages'] = array();
+>>>>>>> c1f41afefd0cdb6b2a54c0e73ce9c35bd2b61c69
 
 
 /*
@@ -69,10 +73,14 @@ $autoload['libraries'] = array();
 */
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 $autoload['helper'] = array();
 =======
 $autoload['helper'] = array('url');
 >>>>>>> 1380736c39a60e978c78e317539abe798344ef85
+=======
+$autoload['helper'] = array();
+>>>>>>> c1f41afefd0cdb6b2a54c0e73ce9c35bd2b61c69
 
 
 /*
