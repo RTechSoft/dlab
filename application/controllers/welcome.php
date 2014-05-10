@@ -25,12 +25,17 @@ class Welcome extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('user_resources');
+		$this->load->view('home_view');
 	}
 
 	public function sign_up()
 	{
 		$this->load->view('signup_view');
+	}
+
+	public function sign_in()
+	{
+		$this->load->view('signin_view');
 	}
 
 	public function load_resource()

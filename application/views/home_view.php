@@ -40,7 +40,7 @@
                         </a>
                     </li>
                     <li  style="padding-left:10px;">
-                        <a href="<?php echo site_url('welcome/sign_up'); ?>" style="padding: 0px;">
+                        <a href="<?php echo site_url('welcome/sign_in'); ?>" style="padding: 0px;">
                             <button type="button" class="btn btn-default">Sign In</button>
                         </a>
                     </li>
