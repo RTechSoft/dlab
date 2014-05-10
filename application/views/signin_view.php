@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Sign Up</title>
+    <title>Sign In</title>
 
     <!-- Bootstrap core CSS -->
     <link href="<?php echo base_url(); ?>css/bootstrap.css" rel="stylesheet">
@@ -47,10 +47,10 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right" style="padding-top:8px;">
                     <li>
-                        <button type="button" class="btn btn-default">Sign up</button>
+                        <?php echo anchor('welcome/sign_up', 'Sign Up'); ?>
                     </li>
                     <li  style="padding-left:10px;">
-                        <button type="button" class="btn btn-default">Sign in</button>
+                        <?php echo anchor('welcome/sign_in', 'Sign In'); ?>
                     </li>
                 </ul>
             </div>
