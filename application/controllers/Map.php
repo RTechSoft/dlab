@@ -14,6 +14,7 @@ class Map extends CI_Controller {
 		$data['police'] = $this->map_model->getPolice(); //get police stations from db
 		$data['schools'] = $this->map_model->getSchools(); //get schools from db
 		$this->load->view('map',$data); //pass data to view
+		//end
 	}
 }
 ?>
