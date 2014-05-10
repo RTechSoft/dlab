@@ -31,5 +31,10 @@
 			
 			return $this->db->query($sql);
 		}
-		
+		public function getOrgs()
+		{
+			$sql = "SELECT * FROM organization";
+			
+			return $this->db->query($sql);
+		}
 }

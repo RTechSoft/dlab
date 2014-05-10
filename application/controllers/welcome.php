@@ -30,6 +30,7 @@ class Welcome extends CI_Controller {
 		$data['fire']=$this->map_model->getFirestations(); //get firestations from db
 		$data['police'] = $this->map_model->getPolice(); //get police stations from db
 		$data['schools'] = $this->map_model->getSchools(); //get schools from db
+		$data['orgs'] = $this->map_model->getOrgs();
 		$this->load->view('home_view',$data); //pass data to view
 		//end
 	}

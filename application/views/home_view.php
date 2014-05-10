@@ -21,7 +21,7 @@
 
 <body>
     <div class="container" style="height: 150px;"> 
-        <div class="jumbotron" style="background: #fff;">
+        <div class="jumbotron">
             <h1 style="text-align:center; margin-top: -8px;"> iRescue</h1>
         </div>
     </div>
@@ -135,8 +135,8 @@
     var hospitals = new L.layerGroup();
     var firestations = new L.layerGroup();
     var policestations = new L.layerGroup();
-    var schools = new L.layerGroup()
-
+    var schools = new L.layerGroup();
+    var orgs  = new L.layerGroup();
  //icons
 var hospIcon = L.icon({
     iconUrl: '<?php echo base_url();?>images/hospital.png',
@@ -233,6 +233,20 @@ var schoolIcon = L.icon({
     endforeach;
 ?>
 
+//other organizations
+<?php
+    foreach($orgs->result_array() as $row):
+    
+    if($row['long']>120.959449 && $row['lat']>14.557898 && $row['long']<121.024790 && $row['lat']<14.638464):
+?>
+<?php
+    echo "var org".$row['user_id']."=L.marker([".$row['lat'].",".$row['long']."]).bindPopup(\"<a href=\'#/\'>".$row['name']."\").addTo(orgs);\n";
+?>
+<?php
+    endif;
+    endforeach;
+?>
+
 var southWest = L.latLng(14.557898, 120.959449),
     northEast = L.latLng(14.638464, 121.024790),
     bounds = L.latLngBounds(southWest, northEast);
@@ -240,7 +254,7 @@ map = L.map('map', {
     layers: mapLayer,
     center: [14.5942,120.982],
     maxBounds:bounds,
-    maxZoom:15,
+    maxZoom:17,
     minZoom:12,
     zoom: 13
 });
@@ -250,7 +264,8 @@ L.control.layers({
     'Hospitals':hospitals,
     'Firestations':firestations,
     'Police Stations':policestations,
-    'Schools':schools
+    'Schools':schools,
+    'Private Organizations': orgs
 
 }).addTo(map);
 
