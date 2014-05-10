@@ -1,0 +1,10 @@
+CREATE TABLE `resource` (
+	`resource_id` INT( 50 ) NOT NULL AUTO_INCREMENT ,
+	`owner_id` INT( 50 ) NOT NULL ,
+	`type` VARCHAR( 150 ) NOT NULL ,
+    `quantity` INT( 1000 ) NOT NULL ,
+  	`no_of_available_units` INT( 1000 ) NOT NULL ,
+  	`remarks` VARCHAR( 255 ) NOT NULL ,
+	PRIMARY KEY ( `resource_id` ) ,
+	CONSTRAINT FOREIGN KEY (`owner_id`) REFERENCES `organization` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE = InnoDB

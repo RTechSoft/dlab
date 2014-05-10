@@ -45,12 +45,12 @@
                     <li><a href="#contact">About</a>
                     </li>
                 </ul>
-                <ul class="nav navbar-nav navbar-right">
+                <ul class="nav navbar-nav navbar-right" style="padding-top:8px;">
                     <li>
-                        <button type="button" class="btn btn-default btn">Sign up</button>
+                        <button type="button" class="btn btn-default">Sign up</button>
                     </li>
-                    <li>
-                        <button type="button" class="btn btn-default btn">Sign in</button>
+                    <li  style="padding-left:10px;">
+                        <button type="button" class="btn btn-default">Sign in</button>
                     </li>
                 </ul>
             </div>
