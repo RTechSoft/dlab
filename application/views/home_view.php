@@ -11,6 +11,7 @@
 
     <!-- Bootstrap core CSS -->
     <link href="<?php echo base_url(); ?>css/bootstrap.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>css/otherStyles.css" rel="stylesheet">
 
     <!-- Add custom CSS here -->
     <style>
@@ -47,7 +48,7 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right" style="padding-top:8px;">
                     <li>
-                        <?php echo anchor('welcome/sign_up', 'Sign Up'); ?>
+                        <button type="button" class="btn btn-default"><?php echo anchor('welcome/sign_up', 'Sign Up'); ?></button>
                     </li>
                     <li  style="padding-left:10px;">
                         <button type="button" class="btn btn-default">Sign in</button>
@@ -87,6 +88,36 @@
                 </div><!-- /.navbar-collapse -->
             </div>
         </nav>
+        <div>
+            <img class="mapDisplay" src="images/Untitled.png">
+        </div>
+        <div>
+            <h3>Results</h3>
+            <div class="panel panel-danger">
+                <div class="panel-heading">
+                    <h5 class="panel-title">Organization Name</h5>
+                </div>
+                <div class="panel-body">
+                    <ul style="list-style:none;">
+                        <li>Contact number/s:</li>
+                        <li>Address:</li>
+                        <li>Number of available resources:</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="panel panel-danger">
+                <div class="panel-heading">
+                    <h5 class="panel-title">Organization Name</h5>
+                </div>
+                <div class="panel-body">
+                    <ul style="list-style:none;">
+                        <li>Contact number/s:</li>
+                        <li>Address:</li>
+                        <li>Number of available resources:</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
     <!-- /.container -->
 
