@@ -4146,10 +4146,10 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   padding: 6px 12px;
   margin-left: -1px;
   line-height: 1.428571429;
-  color: #428bca;
+  color: #c0392b;
   text-decoration: none;
   background-color: #fff;
-  border: 1px solid #ddd;
+  border: 1px solid #ebccd1;
 }
 .pagination > li:first-child > a,
 .pagination > li:first-child > span {
@@ -4166,9 +4166,9 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .pagination > li > span:hover,
 .pagination > li > a:focus,
 .pagination > li > span:focus {
-  color: #2a6496;
-  background-color: #eee;
-  border-color: #ddd;
+  color: #e74c3c;
+  background-color: rgba(255, 150, 150,0.1);
+  border-color: #ebaab0;
 }
 .pagination > .active > a,
 .pagination > .active > span,

@@ -7,36 +7,23 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Starter Template for Bootstrap</title>
+    <title>Home | iRescue</title>
 
     <!-- Bootstrap core CSS -->
     <link href="<?php echo base_url(); ?>css/bootstrap.css" rel="stylesheet">
     <link href="<?php echo base_url(); ?>css/otherStyles.css" rel="stylesheet">
 
-    <!-- Add custom CSS here -->
-    <style>
-    body {
-        margin-top: 60px;
-    }
-    </style>
-
 </head>
 
 <body>
+    <div class="container" style="height: 150px;"> 
+        <div class="jumbotron">
+            <h1 style="text-align:center; margin-top: -8px;"> iRescue</h1>
+        </div>
+    </div>
 
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-inverse" role="navigation">
         <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.php">iRescue</a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav">
                     <li><a href="#about">Home</a>
@@ -48,10 +35,14 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right" style="padding-top:8px;">
                     <li>
-                        <button type="button" class="btn btn-default"><?php echo anchor('welcome/sign_up', 'Sign Up'); ?></button>
+                        <a href="<?php echo site_url('welcome/sign_up'); ?>" style="padding: 0px;">
+                            <button type="button" class="btn btn-default">Sign Up</button>
+                        </a>
                     </li>
                     <li  style="padding-left:10px;">
-                        <button type="button" class="btn btn-default">Sign in</button>
+                        <a href="<?php echo site_url('welcome/sign_up'); ?>" style="padding: 0px;">
+                            <button type="button" class="btn btn-default">Sign In</button>
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -117,6 +108,11 @@
                     </ul>
                 </div>
             </div>
+            <ul class="pagination">
+                <li><a href="#">&laquo;</a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">&raquo;</a></li>
+            </ul>
         </div>
     </div>
     <!-- /.container -->
