@@ -47,10 +47,14 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right" style="padding-top:8px;">
                     <li>
-                        <button type="button" class="btn btn-default">Sign up</button>
+                        <a href="<?php echo site_url('welcome/sign_up'); ?>" style="padding: 0px;">
+                            <button type="button" class="btn btn-default">Sign Up</button>
+                        </a>
                     </li>
                     <li  style="padding-left:10px;">
-                        <button type="button" class="btn btn-default">Sign in</button>
+                        <a href="<?php echo site_url('welcome/sign_up'); ?>" style="padding: 0px;">
+                            <button type="button" class="btn btn-default">Sign In</button>
+                        </a>
                     </li>
                 </ul>
             </div>
