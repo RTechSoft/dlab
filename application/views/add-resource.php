@@ -10,8 +10,8 @@
     <title>Starter Template for Bootstrap</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>css/bootstrap.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
     <style>
     #banner
@@ -77,18 +77,14 @@
         </div>
         <!-- /.container -->
         </nav>
-        <div class="col-lg-12">  
-            <div class="panel">
-                <div class="panel-body">
-                </div>
-            </div>
-        </div>
-        
+       
         <div class="row">
+             <div class="container">
             <div class="col-lg-12">
-
+                <h3>ADD RESOURCE</h3>
             </div>
         </div>
+    </div>
     </div>
     </div>
     <!-- /.container -->
@@ -96,7 +92,11 @@
     <!-- JavaScript -->
     <script src="js/jquery-1.10.2.js"></script>
     <script src="js/bootstrap.js"></script>
-
+    <script>
+    $( "#add-res" ).click(function() {
+     window.location.href='user';
+    });
+    </script>
 </body>
 
 </html>
