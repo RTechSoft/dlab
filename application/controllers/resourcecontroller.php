@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Welcome extends CI_Controller {
+class ResourceController extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -20,17 +20,9 @@ class Welcome extends CI_Controller {
 
 	public function __construct() {
 		parent::__construct();
-		$this->load->helper("url","form");
-	}
-
-	public function index()
-	{
-		$this->load->view('request_resource');
-	}
-
-	public function sign_up()
-	{
-		$this->load->view('signup_view');
+		$this->load->helper("url");
+		$this->load->helper("form");
+		$this->load->model("resource_model");
 	}
 
 	public function load_resource()
@@ -40,10 +32,14 @@ class Welcome extends CI_Controller {
 
 	public function load_addres_form()
 	{
-		$this->load->view('add-resource.php');
+		$this->load->view('add-resource');
+	}
+
+	public function add_resource() {
+			$this->resource_model->add_resource_table();
 	}
 
 }
 
 /* End of file welcome.php */
-/* Location: ./application/controllers/welcome.php */
+/* Location: ./application/controllers/welcome.php */?>

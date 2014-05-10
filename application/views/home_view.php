@@ -17,7 +17,7 @@
 
 <body>
     <div class="container" style="height: 150px;"> 
-        <div class="jumbotron">
+        <div class="jumbotron" style="background: #fff;">
             <h1 style="text-align:center; margin-top: -8px;"> iRescue</h1>
         </div>
     </div>
