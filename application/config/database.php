@@ -48,23 +48,10 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> c1f41afefd0cdb6b2a54c0e73ce9c35bd2b61c69
 $db['default']['hostname'] = 'localhost';
-$db['default']['username'] = '';
-$db['default']['password'] = '';
-$db['default']['database'] = '';
-<<<<<<< HEAD
-=======
-$db['default']['hostname'] = 'localhost:8889'; //
-$db['default']['username'] = 'root'; //
-$db['default']['password'] = ''; 
-$db['default']['database'] = 'ci'; //
->>>>>>> 1380736c39a60e978c78e317539abe798344ef85
-=======
->>>>>>> c1f41afefd0cdb6b2a54c0e73ce9c35bd2b61c69
+$db['default']['username'] = 'root';
+$db['default']['password'] = 'anette';
+$db['default']['database'] = 'capstone';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;

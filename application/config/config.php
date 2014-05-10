@@ -14,15 +14,7 @@
 | path to your installation.
 |
 */
-<<<<<<< HEAD
-<<<<<<< HEAD
 $config['base_url']	= '';
-=======
-$config['base_url']	= 'http://localhost:8888/ci/';
->>>>>>> 1380736c39a60e978c78e317539abe798344ef85
-=======
-$config['base_url']	= '';
->>>>>>> c1f41afefd0cdb6b2a54c0e73ce9c35bd2b61c69
 
 /*
 |--------------------------------------------------------------------------
@@ -34,7 +26,7 @@ $config['base_url']	= '';
 | variable so that it is blank.
 |
 */
-$config['index_page'] = 'index.php';
+$config['index_page'] = '';
 
 /*
 |--------------------------------------------------------------------------
@@ -52,7 +44,7 @@ $config['index_page'] = 'index.php';
 | 'ORIG_PATH_INFO'	Uses the ORIG_PATH_INFO
 |
 */
-$config['uri_protocol']	= 'AUTO';
+$config['uri_protocol']	= 'REQUEST_URI';
 
 /*
 |--------------------------------------------------------------------------
@@ -232,7 +224,7 @@ $config['cache_path'] = '';
 | MUST set an encryption key.  See the user guide for info.
 |
 */
-$config['encryption_key'] = '';
+$config['encryption_key'] = '9acsnd9012uejcsd120v34u2nkkkcsasdcy12ubcasmd';
 
 /*
 |--------------------------------------------------------------------------
@@ -256,15 +248,7 @@ $config['sess_cookie_name']		= 'ci_session';
 $config['sess_expiration']		= 7200;
 $config['sess_expire_on_close']	= FALSE;
 $config['sess_encrypt_cookie']	= FALSE;
-<<<<<<< HEAD
-<<<<<<< HEAD
 $config['sess_use_database']	= FALSE;
-=======
-$config['sess_use_database']	= TRUE;
->>>>>>> 1380736c39a60e978c78e317539abe798344ef85
-=======
-$config['sess_use_database']	= FALSE;
->>>>>>> c1f41afefd0cdb6b2a54c0e73ce9c35bd2b61c69
 $config['sess_table_name']		= 'ci_sessions';
 $config['sess_match_ip']		= FALSE;
 $config['sess_match_useragent']	= TRUE;
