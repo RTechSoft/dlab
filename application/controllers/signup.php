@@ -25,6 +25,7 @@ class SignUp extends CI_Controller {
 
 		if($this->form_validation->run() == TRUE) {
 			$this->organization_model->add_organization();
+			$this->load->view('signin_view');
 			//THE USER IS AUTOMATICALLY LOGGED IN
 		}
 		else {
