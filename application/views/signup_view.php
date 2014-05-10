@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Starter Template for Bootstrap</title>
+    <title>Sign Up</title>
 
     <!-- Bootstrap core CSS -->
     <link href="<?php echo base_url(); ?>css/bootstrap.css" rel="stylesheet">
@@ -32,7 +32,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.php">Start Bootstrap</a>
+                <a class="navbar-brand" href="index.php">LOL</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -47,7 +47,7 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right" style="padding-top:8px;">
                     <li>
-                        <?php echo anchor('welcome/sign_up', 'Sign Up'); ?>
+                        <button type="button" class="btn btn-default">Sign up</button>
                     </li>
                     <li  style="padding-left:10px;">
                         <button type="button" class="btn btn-default">Sign in</button>
@@ -63,8 +63,8 @@
 
         <div class="row">
             <div class="col-lg-12">
-                <h1>A better Bootstrap starter template.</h1>
-                <p>Complete with pre-defined file paths that you won't have to change!</p>
+                <h1>LOL</h1>
+                <p>LOL!</p>
             </div>
         </div>
 
