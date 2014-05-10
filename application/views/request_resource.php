@@ -16,9 +16,11 @@
     </head>
 
     <body>
-        <div class="container" style="height: 150px;"> 
-            <div class="jumbotron" style="background: #fff;">
-                <h1 style="text-align:center; margin-top: -8px;"> iRescue</h1>
+        <div style="height: 150px; background: #000;">
+            <div class="container"> 
+                <div class="jumbotron" style="background: #000;">
+                    <h1 style="text-align:center; margin-top: -8px; color: #fff;"><b class="glyphicon glyphicon-screenshot"></b> iRescue</h1>
+                </div>
             </div>
         </div>
 
@@ -26,7 +28,7 @@
             <div class="container">
                 <div class="collapse navbar-collapse navbar-ex1-collapse">
                     <ul class="nav navbar-nav">
-                        <li><a href="#about">Home</a>
+                        <li><a href="<?php echo site_url('welcome'); ?>">Home</a>
                         </li>
                         <li><a href="#services">Organizations</a>
                         </li>
