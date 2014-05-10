@@ -22,14 +22,15 @@ class Welcome extends CI_Controller {
 		parent::__construct();
 		$this->load->helper("url");
 	}
- 
+
 	public function index()
 	{
 		$this->load->view('user_resources');
 	}
 
-	public function loadAddResourcePage(){
-		$this->load->view('addResource_view');
+	public function sign_up()
+	{
+		$this->load->view('signup_view');
 	}
 
 	public function load_resource()

@@ -9,8 +9,12 @@
 
     <title>Starter Template for Bootstrap</title>
 
+    <script type="text/javascript" src="<?php echo base_url();?>js/jquery-1.10.2.js" ></script>
+    <script type="text/javascript" src="<?php echo base_url();?>js/bootstrap.js" ></script>
+
     <!-- Bootstrap core CSS -->
     <link href="<?php echo base_url();?>css/bootstrap.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>css/bootstrap.min.css" rel="stylesheet">
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
     <style>
@@ -19,7 +23,6 @@
         height: 150px;
     }
     </style>
-
 </head>
 
 <body>
@@ -80,8 +83,73 @@
        
         <div class="row">
              <div class="container">
-            <div class="col-lg-12">
-                <h3>ADD RESOURCE</h3>
+            <div class="col-lg-8">
+
+                <div class="panel panel-default">
+                    <div class="panel-heading"><label>ADD RESOURCE</label></div>
+                    <div class="panel-body">
+                      
+                    <form method="post">
+
+                    
+                    <div class="row">
+                        <div class="col-lg-3">
+                        <div class="form-group">
+                        <label for="type">Type</label>
+                            <div class="btn-group">
+                            <button id="select-market" type="button" class="btn btn-default dropdown-toggle" style="width:115px">
+                            Select Type
+                            </button>
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                <span class="caret"></span>
+                                <span class="sr-only">Toggle Dropdown</span>
+                            </button>
+                            
+                            <ul class="dropdown-menu" role="menu" id="country-menu">
+                            <li><a href="#">Ambulance</a></li>
+                            <li><a href="#">Firetruck</a></li>
+                            <li><a href="#">Truck</a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#">Vietnam</a></li>
+                        </div>
+                        </div>
+                        </div>
+
+                        <div class="col-lg-3">
+                        <div class="form-group">
+                        <label for="type">Quantity</label>
+                            <input type="text" class="form-control" name="type" id="type" required>
+                        </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                        <div class="form-group">
+                        <label for="type">Remarks</label>
+                            <textarea class="form-control" rows="5"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                        <button id="add-res" type="button" class="btn btn-default"><i class="fa fa-upload"></i> <label>Upload Pictures</label></button>
+                        </div>
+                
+                        <div class="form-group">
+                        <button id="add-res" type="button" class="btn btn-default"><label>Submit</label></button>
+                        </div>
+                    </div>
+                    </div>
+                    </form>
+   
+                </div>
+               
+               
+
+        <div class="col-lg-6">
+
+                    </div>
+                </div>
+            </div>
             </div>
         </div>
     </div>
@@ -93,9 +161,7 @@
     <script src="js/jquery-1.10.2.js"></script>
     <script src="js/bootstrap.js"></script>
     <script>
-    $( "#add-res" ).click(function() {
-     window.location.href='user';
-    });
+    
     </script>
 </body>
 
