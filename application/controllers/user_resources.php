@@ -26,16 +26,21 @@
 </head>
 
 <body>
-    <div style="height: 150px; background: #000;">
-        <div class="container"> 
-            <div class="jumbotron" style="background: #000;">
-                <h1 style="text-align:center; margin-top: -8px; color: #fff;"><b class="glyphicon glyphicon-screenshot"></b> iRescue</h1>
-            </div>
-        </div>
+    <div class="container" id="banner"> 
+        <h1 style="text-align:center;"> iRescue</h1>
     </div>
 
     <nav class="navbar navbar-inverse" role="navigation" style="border-radius:0px">
         <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav">
@@ -44,13 +49,6 @@
                     <li><a href="#services">Organizations</a>
                     </li>
                     <li><a href="#contact">About</a>
-                    </li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right" style="padding-top:8px;">
-                    <li>
-                        <a href="" style="padding: 0px;">
-                            <button type="button" class="btn btn-default">Sign Out</button>
-                        </a>
                     </li>
                 </ul>
             </div>
@@ -84,11 +82,23 @@
         </nav>
         <div class="col-lg-8">  
             <?php
-                $resources = 0; //if there are no resources
-                if ($resources == 0)
+
+               echo $listRes;
+
+               foreach ($listRes as $row){
+                if ($row['quantity']== 0)
                 {
-                    echo '<h1>There are no resources listed.</h1><br><button id="add-res" type="button" class="btn btn-lg"><label>Add Resource</label></button>';
+                    echo '<h1>There are no resources listed.</h1><br><a href="resourcecontroller/load_addres_form"><input type="submit" class="btn btn-lg" value="Add Resource" /></input></a>';
                 }
+                else
+                {
+                    while ($i < $count_resources)
+                    {
+                        echo '<h1>There are no resources listed.</h1><br><a href="resourcecontroller/load_addres_form"><input type="submit" class="btn btn-lg" value="Add Resource" /></input></a>';
+                        $i = $i + 1;
+                    }
+                }
+            }
             ?>
         </div>
         
@@ -104,11 +114,7 @@
     <!-- JavaScript -->
     <script src="js/jquery-1.10.2.js"></script>
     <script src="js/bootstrap.js"></script>
-    <script>
-    $( "#add-res" ).click(function() {
-     window.location.href="welcome/load_addres_form";
-    });
-    </script>
+    
 </body>
 
 </html>
