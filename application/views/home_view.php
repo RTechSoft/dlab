@@ -237,7 +237,7 @@ var schoolIcon = L.icon({
     if($row['long']>120.959449 && $row['lat']>14.557898 && $row['long']<121.024790 && $row['lat']<14.638464):
 ?>
 <?php
-    echo "var org".$row['user_id']."=L.marker([".$row['lat'].",".$row['long']."],{icon: schoolIcon}).bindPopup(\"<a href=\'#/\'>".$row['name']."\").addTo(orgs);\n";
+    echo "var org".$row['user_id']."=L.marker([".$row['lat'].",".$row['long']."]).bindPopup(\"<a href=\'#/\'>".$row['name']."\").addTo(orgs);\n";
 ?>
 <?php
     endif;
