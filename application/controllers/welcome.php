@@ -22,15 +22,18 @@ class Welcome extends CI_Controller {
 		parent::__construct();
 		$this->load->helper('url','form');
 		$this->load->model('map_model');
+		$this->load->model('resource_model');
 	}
 
 	public function index()
 	{
+		$quan = $this->input->post('quantity');
 		$data['hosp']=$this->map_model->getHospitals(); //get hospitals from db
 		$data['fire']=$this->map_model->getFirestations(); //get firestations from db
 		$data['police'] = $this->map_model->getPolice(); //get police stations from db
 		$data['schools'] = $this->map_model->getSchools(); //get schools from db
-		$data['orgs'] = $this->map_model->getOrgs();
+		$data['orgs2'] = $this->map_model->getOrgs(); //get schools from db
+		$data['orgs'] = $this->resource_model->getResources($quan);
 		$this->load->view('home_view',$data); //pass data to view
 		//end
 	}

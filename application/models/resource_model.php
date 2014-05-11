@@ -5,10 +5,19 @@ class Resource_model extends CI_Model {
 	public function __construct() {
 		parent::__construct();
 	}
-	public function getResources($type)
+	public function getResources($quan)
 	{
-		$sql = "SELECT * FROM resources WHERE type='".$type."'";
-		return $this->db->query($sql);
+		$sql = "SELECT * FROM resource WHERE quantity<='".$quan."'";
+		$this->db->select('*'); 
+			 $this->db->from('resource');
+   			 $this->db->join('organization','resource.owner_id = organization.user_id');
+    		 $this->db->group_by("resource.owner_id"); 
+    		# SELECT maemberID,
+            #	GROUP_CONCAT(DISTINCT test_score)
+             #   FROM taskassignment
+         #GROUP BY memberID;
+    		 
+            return $this->db->get()->result_array();
 
 	}
 	public function add_resource_table()

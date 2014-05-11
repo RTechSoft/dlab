@@ -23,6 +23,7 @@ class ResourceController extends CI_Controller {
 		$this->load->helper("url");
 		$this->load->helper("form");
 		$this->load->model("resource_model");
+		$this->load->model("map_model");
 	}
 
 	public function index()
@@ -48,6 +49,17 @@ class ResourceController extends CI_Controller {
 		);
 		$this->resource_model->add_resource_table($resource_data);
 		$this->load->view('add-resource');
+	}
+
+	public function search()
+	{
+		$quan = $this->input->post('quantity');
+		$data['hosp']=$this->map_model->getHospitals(); //get hospitals from db
+		$data['fire']=$this->map_model->getFirestations(); //get firestations from db
+		$data['police'] = $this->map_model->getPolice(); //get police stations from db
+		$data['schools'] = $this->map_model->getSchools(); //get schools from db
+		$data['orgs'] = $this->resource_model->getResources($quan);
+		$this->load->view("home_view",$data);
 	}
 
 }

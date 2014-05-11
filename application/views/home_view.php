@@ -96,7 +96,8 @@
         
         <div>
             <h3>Results</h3>
-            <?php foreach($orgs->result_array() as $row):?>
+            <?php 
+            foreach($orgs as $row):?>
             <div class="panel panel-danger">
                 <div class="panel-heading">
                     <h5 class="panel-title"><?php echo $row['name'];?></h5>
@@ -110,7 +111,8 @@
                 </div>
             </div>
 
-            <?php endforeach; ?>
+            <?php endforeach; 
+            ?>
             <ul class="pagination">
                 <li><a href="#">&laquo;</a></li>
                 <li><a href="#">1</a></li>
@@ -124,15 +126,14 @@
     <script src="js/jquery-1.10.2.js"></script>
     <script src="js/bootstrap.js"></script>
     <script type="text/javascript">
-
- //layers
+//layers
     var mapLayer = MQ.mapLayer(),
     map;
     var hospitals = new L.layerGroup();
     var firestations = new L.layerGroup();
     var policestations = new L.layerGroup();
-    var schools = new L.layerGroup();
-    var orgs  = new L.layerGroup();
+    var schools = new L.layerGroup()
+    var orgs = new L.layerGroup();
  //icons
 var hospIcon = L.icon({
     iconUrl: '<?php echo base_url();?>images/hospital.png',
@@ -231,27 +232,21 @@ var schoolIcon = L.icon({
 
 //other organizations
 <?php
-    foreach($orgs->result_array() as $row):
+    foreach($orgs2->result_array() as $row):
     
     if($row['long']>120.959449 && $row['lat']>14.557898 && $row['long']<121.024790 && $row['lat']<14.638464):
 ?>
 <?php
-    echo "var org".$row['user_id']."=L.marker([".$row['lat'].",".$row['long']."]).bindPopup(\"<a href=\'#/\'>".$row['name']."\").addTo(orgs);\n";
+    echo "var org".$row['user_id']."=L.marker([".$row['lat'].",".$row['long']."],{icon: schoolIcon}).bindPopup(\"<a href=\'#/\'>".$row['name']."\").addTo(orgs);\n";
 ?>
 <?php
     endif;
     endforeach;
 ?>
 
-var southWest = L.latLng(14.557898, 120.959449),
-    northEast = L.latLng(14.638464, 121.024790),
-    bounds = L.latLngBounds(southWest, northEast);
 map = L.map('map', {
     layers: mapLayer,
     center: [14.5942,120.982],
-    maxBounds:bounds,
-    maxZoom:17,
-    minZoom:12,
     zoom: 13
 });
 L.control.layers({
@@ -261,7 +256,7 @@ L.control.layers({
     'Firestations':firestations,
     'Police Stations':policestations,
     'Schools':schools,
-    'Private Organizations': orgs
+    'Organizations':orgs
 
 }).addTo(map);
 
@@ -279,10 +274,7 @@ dir.route({
     ]
 });
  
-map.addLayer(MQ.routing.routeLayer({
-    directions: dir,
-    fitBounds: true
-}));
+
 
 //click function
 function onClick(e) {alert(this.getLatLng().lat);}
