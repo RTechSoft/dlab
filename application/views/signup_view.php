@@ -93,7 +93,10 @@
                                             </div>
                                             <div class="col-xs-3">
                                                 <label for="type">Organization Type</label>
-                                                <input type="text" class="form-control" id="type" name="type" placeholder="i.e. Government, Non-government"value="<?php echo set_value('type'); ?>" />
+                                                <select name ="type" class="form-control" id="type">
+                                                    <option value="Government">Government</option>
+                                                    <option value="Non-Government">Non-Government</option>
+                                                </select>
                                             </div>
                                         </div>
                                         <br>
