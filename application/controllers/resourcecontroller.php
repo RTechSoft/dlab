@@ -58,6 +58,7 @@ class ResourceController extends CI_Controller {
 		$data['fire']=$this->map_model->getFirestations(); //get firestations from db
 		$data['police'] = $this->map_model->getPolice(); //get police stations from db
 		$data['schools'] = $this->map_model->getSchools(); //get schools from db
+	$data['orgs2'] = $this->map_model->getOrgs(); //get schools from db	
 		$data['orgs'] = $this->resource_model->getResources($quan);
 		$this->load->view("home_view",$data);
 	}
