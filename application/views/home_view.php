@@ -93,30 +93,21 @@
         
         <div>
             <h3>Results</h3>
+            <?php foreach($orgs->result_array() as $row):?>
             <div class="panel panel-danger">
                 <div class="panel-heading">
-                    <h5 class="panel-title">Organization Name</h5>
+                    <h5 class="panel-title"><?php echo $row['name'];?></h5>
                 </div>
                 <div class="panel-body">
                     <ul style="list-style:none;">
-                        <li>Contact number/s:</li>
-                        <li>Address:</li>
-                        <li>Number of available resources:</li>
+                        <li>Contact number/s:<?php echo $row['hotline'];?></li>
+                        <li>Address:<?php echo $row['address'];?></li>
+                        <li>Number of available resources:<?php echo $row['user_id'];?></li>
                     </ul>
                 </div>
             </div>
-            <div class="panel panel-danger">
-                <div class="panel-heading">
-                    <h5 class="panel-title">Organization Name</h5>
-                </div>
-                <div class="panel-body">
-                    <ul style="list-style:none;">
-                        <li>Contact number/s:</li>
-                        <li>Address:</li>
-                        <li>Number of available resources:</li>
-                    </ul>
-                </div>
-            </div>
+
+            <?php endforeach; ?>
             <ul class="pagination">
                 <li><a href="#">&laquo;</a></li>
                 <li><a href="#">1</a></li>
