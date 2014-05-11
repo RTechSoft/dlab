@@ -10,8 +10,11 @@
     <title>Starter Template for Bootstrap</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>css/bootstrap.css" rel="stylesheet">
+    <script src="<?php echo base_url();?>js/jquery-1.10.2.js"></script>
+    <script src="<?php echo base_url();?>js/bootstrap.js"></script>
+
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
     <style>
     #banner
@@ -77,11 +80,26 @@
         </div>
         <!-- /.container -->
         </nav>
-        <div class="col-lg-12">  
-            <div class="panel">
-                <div class="panel-body">
-                </div>
-            </div>
+        <div class="col-lg-8">  
+            <?php
+
+               echo $listRes;
+
+               foreach ($listRes as $row){
+                if ($row['quantity']== 0)
+                {
+                    echo '<h1>There are no resources listed.</h1><br><a href="resourcecontroller/load_addres_form"><input type="submit" class="btn btn-lg" value="Add Resource" /></input></a>';
+                }
+                else
+                {
+                    while ($i < $count_resources)
+                    {
+                        echo '<h1>There are no resources listed.</h1><br><a href="resourcecontroller/load_addres_form"><input type="submit" class="btn btn-lg" value="Add Resource" /></input></a>';
+                        $i = $i + 1;
+                    }
+                }
+            }
+            ?>
         </div>
         
         <div class="row">
@@ -96,7 +114,7 @@
     <!-- JavaScript -->
     <script src="js/jquery-1.10.2.js"></script>
     <script src="js/bootstrap.js"></script>
-
+    
 </body>
 
 </html>

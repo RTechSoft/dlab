@@ -25,6 +25,13 @@ class ResourceController extends CI_Controller {
 		$this->load->model("resource_model");
 	}
 
+	public function index()
+	{
+		$data['listRes'] = $this->resource_model->get_res_table(); //list of resources
+		$this->load->view('user_resources', $data);
+
+	}
+
 	public function load_resource()
 	{
 		$this->load->view('user_resources');
@@ -32,11 +39,15 @@ class ResourceController extends CI_Controller {
 
 	public function load_addres_form()
 	{
+		$resource_data = array(
+			'owner_id' => 1, //arbitrary-for testing
+			'type' => $this->input->post('type'),
+			'quantity' => $this->input->post('quantity'),
+			'no_of_available_units' => $this->input->post('no_available_units'),
+			'remarks' => $this->input->post('remarks')
+		);
+		$this->resource_model->add_resource_table($resource_data);
 		$this->load->view('add-resource');
-	}
-
-	public function add_resource() {
-			$this->resource_model->add_resource_table();
 	}
 
 }
