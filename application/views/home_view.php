@@ -76,9 +76,12 @@
                         </ul>
                     </li>
                   </ul>
-                  <form class="navbar-form navbar-left">
+                  <?php
+                    $attributes = array('class' => 'navbar-form navbar-left', 'id' => 'search');
+                  ?>
+                    <?php echo form_open_multipart("resourcecontroller/search",$attributes); ?>
                     <div class="form-group">
-                      <input type="text" class="form-control" placeholder="Quantity">
+                      <input name="quantity" type="text" class="form-control" placeholder="Quantity">
                     </div>
                     <button type="submit" class="btn btn-default">Go</button>
                   </form>

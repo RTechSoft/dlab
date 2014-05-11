@@ -5,7 +5,12 @@ class Resource_model extends CI_Model {
 	public function __construct() {
 		parent::__construct();
 	}
+	public function getResources($type)
+	{
+		$sql = "SELECT * FROM resources WHERE type='".$type."'";
+		return $this->db->query($sql);
 
+	}
 	public function add_resource_table()
 	{
 
